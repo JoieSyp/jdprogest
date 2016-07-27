@@ -1,0 +1,263 @@
+.mainHome{min-width: 300px;max-width: 640px;margin: 0 auto;padding: 0;}
+.topheader{min-width: 320px;max-width: 640px;height: 50px;margin: 0 auto;}
+/*总的内容*/
+.jdswrapperscroll{min-width: 320px;max-width: 640px;margin: 0 auto;width: 100%;background: #f5f5f5;}
+
+/*搜索样式height: 50px;background: black;*/
+.showfixtop{position:fixed;top: 0;height: 40px;margin: 0 auto;width: 100%;max-width: 640px;z-index: 10;min-width: 320px;}
+/*头部下载页面*/
+.showdownload{height: 50px;width: 100%;background: rgba(46,46,46,);}
+/*头部内容*/
+.downloadcon{width: 320px;height: 50px;margin: 0 auto;}
+.xcenter{width: 13px;height: 13px;margin: 18px 0 0 12px;float: left;display: inline-block;}
+.toplogo{width: 40px;height: 40px;margin: 5px 14px 5px 10px;float: left;}
+.topfont{margin: 8px 0;float: left;text-align: center;width: 128px;color: #fffbff;font-size: 1.2rem;}
+.immeopen{float: right;width: 65px;height: 30px;margin: 10px 10px 10px 0;}
+/*搜索框*/
+.index-search{position: absolute;width: 100%;max-width: 640px;overflow: hidden;height: auto;padding-left: 0;padding-right: 0;z-index: 50;}
+.search-content{min-width: 320px;max-width: 640px;margin: 0 auto;z-index: 50;width: 100%;}
+.jd-search-cover{width: 100%;height: 40px;position: absolute;top: 0;margin:0 auto;min-width: 320px;max-width: 640px;background: #c91523;}
+.search-box{width: 100%;height: 40px;margin: 0 auto;position: relative;}
+.search-box-content{margin: 0 10px;height: 100%;line-height: 40px;}
+/*京东字体*/
+.search-box-logo{width: 56px;height: 40px;overflow: hidden;position: absolute;left: 10px;z-index: 50;}
+.search-box-logo .search-logo{
+	display: inline-block;
+     overflow: hidden;
+     width: 56px;height: 25px;
+     margin-top: 6px;
+}
+.searchCommon{display: inline-block;background-image: url("../images/sprite.png");background-repeat: no-repeat;background-size: 200px 200px;}
+.serch-logost{
+	 width: 56px;height: 21px;
+    background-position:0px -109px;
+}
+/*中间搜索框*/
+.search-center{display: inline-block;width: 80%;height: 100%;margin-left: 66px;padding-right: 105px;overflow: hidden;z-index: 50;}
+/*搜索那个图片的显示*/
+.search-search{display: inline-block;width: 20px;height:20px;}
+.search-png{display: inline-block;
+     overflow: hidden;width: 20px;height:20px;}
+.search-posit{width: 20px;height:20px;background-position: -118px 5px;margin-left: 8px;}     
+/*搜素框*/
+.jd-search{   
+	background: #fff;
+    border-radius: 15px;
+    height: 30px;
+    margin-top: 5px;
+    overflow: hidden;
+    width: 82%;
+    z-index: 50;
+    }
+  @media only screen and (min-width:460px ) and (max-width:782px ) {
+  	.jd-search{  width: 100%;}
+  }
+    /*隐藏框*/
+ .input-hidden{    border: 0;
+    display: inline-block;
+    background: 0;
+    font-size: 13px;
+    line-height: 1.2em;
+    height: 1.2em;
+    width: 100%;
+    vertical-align: middle;
+    margin-top: -13px;
+    color: #666;}
+.input-search{display: inline-block;width: 80%;height: 100%;}
+.input-content{width:100%;border: none;vertical-align: middle;height:1.2rem;line-height: 1.2rem;margin-top: -8px;}
+.login{display: inline-block;position: absolute;right: 10px;top: 0;}
+.loginBtn{font-size:15px;text-align: center;vertical-align: middle;color: #fff;}
+/*核心中间内容*/
+.newviewport{position: relative;min-width: 320px;max-width: 640px;margin: 0 auto;background:#f5f5f5;overflow: hidden;}
+/*中间滚动*/
+.slider{width: 100%;margin: 0 auto;min-width: 320px;max-width: 640px;}
+.sliderCommon img{width: 100%;height: 100%;}
+/*中间的内容*/
+.floor{margin: 0 auto;min-width: 320px;max-width: 640px;width: 100%;z-index: 10;overflow: hidden;}
+/*第二层样式*/
+.first-step{height: 154px;width: 100%;position: relative;}
+.first-step-bg{position: absolute;width: 100%;height: 100%;left: 0;right:0;overflow: hidden;}
+.first-step-bg img{width: 100%;height: 100%;}
+.first-oul{width: 100%;min-width: 320px;max-width: 640px;z-index: 20;position: absolute;overflow: hidden;}
+.first-oul li{float: left;width: 25%;text-align: center;vertical-align: middle;margin-top: 10px;overflow: hidden;}
+.first-oul li a{display: block;}
+.first-oul li img{width:35px;}
+.first-oul li span{display: block;margin-top: 6px;color: #919191;font-size: 12px;}
+/*第三层样式*/
+.second-step{width: 100%;overflow: hidden;margin-top: 8px;background: #fff;}
+.second-step-nav{height: 26px;margin: 0 10px;vertical-align: middle;}
+.second-step-navR{float: left;vertical-align: middle;}
+.times{width: 18px;height:22px;display: inline-block;background:url(../images/sprite.png) no-repeat -84px -109px;
+  background-size: 200px 200px;
+}
+.second-step-navR h2{display: inline-block;color: #ca1327; font-size: 14px;white-space: nowrap;margin: 7px 11px 0 3px;}
+.moreSeconds{display: inline-block;float: right;}
+.timecommon{width: 9px;height: 18px;background: #3d3d3d;color: #f7ffff;}
+.moreSeconds{display: inline-block;margin-top: 11px;}
+.moreSeconds span{margin-right: 4px;color: #919191;font-size: 12px;}
+/*下边的主要内容*/
+.second-step-content{margin: 0 auto;width: 100%;overflow: hidden;}
+.second-special{float: left;width: 33.333%;text-align: center;overflow: hidden;font-size: 100%;}
+.second-special img{width:100%;height:auto;}
+.second-special a{display: block;border-right: 1px solid #f8f8f8;}
+.second-special span{display: block;font-size: 8px;text-decoration: line-through;}
+.second-special .seconnd-commonspan{color: #ed5657;text-decoration:none;font-size: 12px;}
+/*楼层下边的下划线*/
+.br-bottom{
+	position: relative;
+}
+.br-bottom:after{
+	height: 1px;
+	content: "";
+	border-top: 1px solid #f8f8f8;
+	position: absolute;
+	bottom: -1px;
+	width: 100%;
+	right: 0;
+	z-index: 10;
+}
+/*左边的线条*/
+.re-border{position: relative;}
+.re-border:after{
+	width: 1px;
+	content: "";
+	border-right: 1px solid #f8f8f8;
+	position: absolute;
+	right: -1px;
+	height: 100%;
+	z-index: 10;
+	top:0;
+}
+/*第三层楼样式*/
+.third-step{
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+/*第一阶梯*/
+.third-cell{width: 100%;height: 100%;font-size: 0;overflow: hidden;}
+/*height的重要性*/
+.third-cellitem{width: 100%;font-size: 100%;overflow: hidden;}
+.third-cellitem div{width: 33.33%;float: left;height: 100%;}
+.third-cellitem div img{width: 100%;height: auto;}
+/*第二阶段*/
+.third-cellT-content{width: 100%;font-size: 100%;overflow: hidden;}
+.third-cellT-content div{width: 50%;float: left;height: 100%;}
+.third-cellT-content div img{width: 100%;height: auto;overflow: hidden;}
+/*第四层*/
+.four-step{width: 100%;min-width: 320px;max-width: 640px;position: relative;}
+.four-content{width: 100%;}
+.four-content .slider-four{min-width: 320px;max-width: 640px;margin:9px;}
+.fourcontent-command img{width: 100%;height: 100%;}
+/*第五层*/
+.five-center{width: 100%;margin: 0 auto;background: #fff;position: relative;}
+.five-center h2{width: 100%;height: 32px;line-height: 32px;font-size: 16px;color: #f25353;text-indent:6px;}
+/*主要内容*/
+.five-mainT{width: 100%;font:100%;overflow: hidden;}
+.five-contentT-left{float: left;width: 50%;height: 100%;}
+.five-contentT-right{float: left;width: 50%;height: 100%;}
+.five-contentTR{width: 100%;}
+/*图片内部填充*/
+.fiveCommon img{width: 100%;height: 100%;}
+.five-contentB{width: 100%;}
+.five-contentBM{float: left;width: 50%;height: 100%;}
+.five-contentBM img{width: 100%;height: 100%;}
+/*主题街*/
+.six-contentTB div{float: left;display: block;width: 50%;}
+.six-contentBT{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+
+.six-maincontent{width: 100%;}
+/*服装展示*/
+.six-contentBT{width: 100%;}
+.six-maincontent div{float: left;width: 25%;}
+.six-maincontent div img{width: 100%;height: 100%;}
+
+/*品牌推荐*/
+.nine-content{width: 100%;overflow: hidden;}
+.nine-main{margin:0 8px 8px 8px;overflow: hidden;min-width: 320px;max-width: 640px;border-right: 1px solid #f8f8f8;}
+.nine-step-center{width: 100%;height: 100%;}
+.nine-stepL{width: 39.47%;height: 100%;overflow: hidden;float:left;}
+.nine-stepL img{width: 100%;height: auto;overflow: hidden;}
+.nine-stepR{width: 60.53%;height: 100%;overflow: hidden;float:left;}
+.nine-step-common{width:50%;float: left;}
+.nine-step-common img{width: 100%;height: auto;overflow: hidden;}
+/*第十层*/
+.ten-step{
+	margin-bottom: 8px;
+}
+.ten-step img{width: 100%;height: 100%;}
+/*最后一层*/
+.last-content{
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+}
+.last-title{background: #fff;width: 100%;}
+.last-title-main{height: 26px;overflow: hidden;margin: 0 8px;}
+.last-title-main h2{color: #838383;font-size:16px ;line-height: 26px;float: left;}
+.last-title-main a{float: right;display: block;color: #f15353; font-size: 12px;line-height: 26px;overflow: hidden;}
+.last-title-main a .last-sprite{
+	display: inline-block;
+	width: 17px;height: 17px;
+	background:url("../images/download.png") no-repeat;
+	background-size: 100% 100%;
+	float: right;
+	margin-top: 4px;
+	margin-right: 6px;
+}
+.last-title-main a .last-font{float: right;}
+/*商品的详信息*/
+.last-detail-oul{
+	width: 100%;
+	overflow: hidden;
+	min-width: 320px;max-width: 640px;
+}
+.last-detail-oul li{width: 50%;height: 100%;background: #fff;display:block;margin:8px 0px 10px;float: left;overflow: hidden;padding: 0;}
+/*.last-detail-oul li:nth-child(2n+1){padding-left: 6px;padding-right: 5px;}
+.last-detail-oul li:nth-child(2n){padding-left: 5px;padding-right: 6px;}*/
+.sample-show{margin-bottom: 5px;}
+.sample-show img{width:100%;height:auto;border-radius: 5px;}
+.sample-show-detail{height: 36px;border-bottom: 1px solid #d7d7d7;margin: 0 5px;}
+.sample-show-detail span{height: 28px;line-height: 14px;display: -webkit-box;overflow: hidden;text-align: left;color: #333;font-size: 12px;}
+
+.sample-sale{margin: 4px;vertical-align: middle;height: auto;}
+.sample-sale span{float: left;font-size: 12px;color: #f36353;display: block;}
+.sample-sale a{float: right;border: 1px solid #b5a8a5;color: #b5a8a5;font-size: 12px;display: block;}
+/*点击继续*/
+.up-submit{display: block;text-align: center;height: 32px;line-height: 32px;background: #f3f5f7;border-top:1px solid #d9dadb;border-bottom:1px solid #d9dadb;}
+.up-submit a{color: #686868;font-size: 13px;}
+.jd-footer{width: 100%;height:169px;min-width: 320px;max-width: 640px;}
+.login-info{border-bottom:1px solid #d9dadb;}
+.login-method{width: 320px;margin: 0 auto;height: 13px;padding: 18px 0;}
+.login-method li{float: left;width: 69px;border-right:1px solid #d9dadb;text-align: center;}
+.login-method li:nth-child(1){width: 90px;}
+/*下边的样式*/
+.login-detail{width: 320px;margin: 0 auto;height: 69px;overflow: hidden;}
+.login-way{margin:9px 0 11px 0;height:49px;width: 320px;}
+.login-way li{float: left;width: 106px;text-align: center;}
+.login-way li a{display: block;overflow: hidden;}
+.login-way .icon-common{width: 34px;height: 34px;display:block;margin: 0 auto;}
+.login-way .iconOne{background-position: -120px -70px;}
+.login-way .iconTwo{background-position: -40px -70px;}
+.login-way .iconThree{background-position: -80px -70px;}
+.icon-font{margin-top: 5px;display: block;}
+/*底部nav*/
+.floor-footer{width: 100%;font-size: 0;margin:0 auto;min-width: 320px;max-width: 640px;}
+.footerNav{position: fixed;bottom: 0;z-index: 60;height: 44px;background: #fff;}
+.footer-content{margin: 0 auto;}
+.footercon-oul{margin: 0 auto;}
+.footercon-oul li{float: left;width: 25%;text-align: center;height: 100%;}
+.footercon-oul li a{display: inline-block;width: 57px;height: 44px;}
+.footercon-oul li img{max-width: 100%;max-height: 100%;width: 100%;height: auto;overflow: hidden;}
+/*回到顶部*/
+.back-top{position: fixed;bottom: 56px;right:8px;width:35px;height: 35px;z-index:50;}
+.back-top img{width: 100%;}
+
+
+
+

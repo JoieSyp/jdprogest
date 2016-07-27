@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<title>登录</title>
+		<link href="css/reset.css" rel="stylesheet" type="text/css"/>
+		<link href="css/login.css" rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<div class="header">
+		   <a href="javascript:void(0)"><span></span></a>
+		   <h2>京东登录</h2>
+		</div>
+		<div class="wrap-content" id="wrapContent">
+			<div class="main" id="main">
+				<div class="item-step" id="markWord"></div>
+				<div class="item-step" id="first-step">
+					<input id="user" class="user"  type="text" placeholder="请输入用户名/邮箱/已验证手机"/>
+				</div>
+				<div class="item-step second-step">
+					<input id="psw" class="user" type="password" placeholder="请输入密码"/>
+					<span id="changebtn">
+						<img src="images/login/download-1.png" style="display: block;"/>
+						<img src="images/login/download-2.png"  style="display: none;" />
+					</span>
+				</div>
+				<div class="item-step third-step">
+					<input id="changeIden" class="user" type="text" placeholder="请输入验证码"/>
+					<span id="changeidenfy"></span>
+				</div>
+				<div class=" item-step month-login">
+					<span class="free-login default-login" id="freeLogin">	
+					</span>
+					<!--就是图片显示-->
+					<span class="login-btn">一个月免登录</span>
+				</div>
+				<div class="item-step submit-btn">
+					<input id="submit"  type="submit" value="登录" class=""/>
+				</div>
+				<div class="item-step rapid-regist">
+					<a href="#" class="regist">快速注册</a>
+					<a href="#" class="back-password">找回密码</a>
+				</div>
+				<div class="item-step submit-method">
+					<span>其他登录方式</span>
+					<a href="#" class="qq-method"><span></span></a>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script src="js/common.js"></script>
+	<script>
+	    var wrapContent=document.getElementById("wrapContent");  //生成新的元素添加
+	    var oMain=document.getElementById("main");
+	    var oFirststep=document.getElementById("first-step");
+	    var userName=document.getElementById("user");        //判断用户名是否是邮箱
+	    var changebtn=document.getElementById("changebtn");
+	    var changeImg=changebtn.getElementsByTagName("img");
+		var freeLogin=document.getElementById("freeLogin");  //一个月免费登录
+	    var passwordN=document.getElementById("psw");
+	    var changeIden=document.getElementById("changeIden"); //验证码的填写
+	    var changeidenfy=document.getElementById("changeidenfy");//验证码的生成
+	    var submitBtn=document.getElementById("submit");   //登录按钮的写法
+	    var letter=['A','B','C','D','E','F','G','a','b','c','d','e','f','g'];
+	    
+	    var oMarkword=document.getElementById("markWord");
+	    
+	    //密码的样式的转换   用了两张图片放在这里
+		changebtn.addEventListener('touchstart',function(){
+			if(changeImg[0].style.display=="block"){
+				changeImg[1].style.display="block";
+				changeImg[0].style.display="none";
+				passwordN.type="text";
+			}else{
+				changeImg[0].style.display="block";
+				changeImg[1].style.display="none";
+				passwordN.type="password";
+			}
+			
+		},false);
+		//验证码的生成！！！！！！！！！！重点。。。。。。。。。。
+		changeidenfy.innerHTML=changeIdenfy().join("")+changeLetter(letter).join("");	
+		changeidenfy.addEventListener('touchstart',function(){
+			this.innerHTML=changeIdenfy().join("")+changeLetter(letter).join("");	
+		},false);
+	   
+	   //登录按钮显示样式
+	   userName.addEventListener('keyup',changeSubmit,false);
+       passwordN.addEventListener('keyup',changeSubmit,false);
+	   changeIden.addEventListener('keyup',changeSubmit,false);
+	    function changeSubmit(){
+	    	   submitBtn.className="";
+	    	    if(userName.value && passwordN.value && changeIden.value){
+	   	   	submitBtn.className="change-submit";
+	   	     }else{
+	   	   	 submitBtn.className="";
+	   	    }
+	    }
+       //一个月免登录
+       var freeNum=freeLogin.className;    //（小按钮）获取一个月免费登录的默认class值
+       freeLogin.addEventListener('touchstart',function(){
+           if(this.className==freeNum){
+           	 this.className=this.getAttribute("class")+" change-login";
+           }else{
+           	 this.className=freeNum;
+           }  
+       },false);
+       //提交按钮 获取sessionStoragge  临时储存，会话结束就删除（就是指当关闭当前页面）
+ 
+       	  submitBtn.addEventListener('touchstart',function(){
+             oMarkword.className="item-step";   //给提示语回复默认样式
+              changeIden.style.borderColor="";    //验证码边框为默认样式
+              passwordN.style.borderColor="";    //密码框的默认样式
+       	  	//触发事件的过程
+       	  	if(this.getAttribute("class")=="change-submit"){   //确定提交按钮高亮
+       	  		if(freeLogin.className==freeNum){  //确定 一个月免费登录为选中状态
+       	  			if(jubgeIdenfy(changeIden.value)==true){  //确定验证码的正确与否  
+       	  			  if(judgeUser(userName.value)==false || jubgePassword(passwordN.value)==false){
+       	  			  	//确定用户名和密码的正确
+       	  			  	 passwordN.style.borderColor="red";  //改变写入密码的样式
+       	  			  	 oMarkword.className=oMarkword.getAttribute("class")+" mark-word";   //更新提示语的样式
+       	  			  	 oMarkword.innerHTML="用户名或者密码错误,请重试";
+       	  		 	     
+       	  		       }else{
+       	  		         oMarkword.className=oMarkword.getAttribute("class")+" mark-word";    // //更新提示语的样式
+       	  		       	 oMarkword.innerHTML="登录成功";
+       	  		       	 sessionStorage.setItem("user",userName.value);
+		  		         sessionStorage.setItem("psw",passwordN.value);
+		  		         sessionStorage.setItem("indenfy",changeIden.value);
+       	  		       }
+       	  		    }else{
+       	  		    	    oMarkword.className=oMarkword.getAttribute("class")+" mark-word";    // 更新提示语的样式
+       	  		    	    oMarkword.innerHTML="验证码错误,请重试";
+       	  		      	changeIden.style.borderColor="red";         //验证码框显示的状态
+                       
+       	  		    }
+       	  
+		  	    }else{
+		  	    	//上边的代码和这个雷同。  没优化代码！！！！！！！！！！！！！！！
+		  	     	if(jubgeIdenfy(changeIden.value)==true){  //确定验证码的正确
+       	  			  if(judgeUser(userName.value)==false || jubgePassword(passwordN.value)==false){
+       	  			  	//确定用户名和密码的正确
+       	  			  	if(judgeUser(userName.value)==false){
+       	  			  		userName.style.borderColor="red";
+       	  			  	}
+       	  			  	if(jubgePassword(passwordN.value)==false){
+       	  			  		passwordN.style.borderColor="red";
+       	  			  	}
+       	  			  	oMarkword.className=oMarkword.getAttribute("class")+" mark-word";
+       	  		 	    oMarkword.innerHTML="用户名或者密码错误";
+       	  		 	    
+       	  		       }else{
+       	  		       	 oMarkword.className=oMarkword.getAttribute("class")+" mark-word";
+       	  		       	 oMarkword.innerHTML="登录成功";
+       	  		       }
+       	  		    }else{
+       	  		    	     oMarkword.className=oMarkword.getAttribute("class")+" mark-word";
+       	  		         oMarkword.innerHTML="验证码错误,请重试";
+       	  		      	changeIden.style.borderColor="red";
+                        
+       	  		    }
+		  	    }
+       	  		
+       	  	}
+           changeidenfy.innerHTML=changeIdenfy().join("")+changeLetter(letter).join("");	
+		  },false);
+
+	    userName.value=sessionStorage.getItem("user");
+	    passwordN.value=sessionStorage.getItem("psw");
+       // 判断用户名的格式的正确  实际上此处应该获得数据库里的数据进行比较然后进行比较
+	function judgeUser(obj){
+		var patten=/^\w+[@]\w+[.][\w.]+$/;
+		if(!patten.exec(obj)){     //exec函数的用法   
+				return false;
+		}else{
+				return true;
+		}
+	};
+	//比较密码的正确与否   获得数据库里的数据来进行比较正确与否
+   function jubgePassword(obj){
+   	if(obj==123){
+   		return true;
+   	}else{
+   		return false;
+   	}
+   };
+   //比较验证码的正确与否    大小写方面！！！！！！！！！！！！
+   function jubgeIdenfy(obj){
+   	console.log(changeidenfy.innerHTML.toLowerCase());
+   	if(obj==changeidenfy.innerHTML.toLowerCase() || obj==changeidenfy.innerHTML.toUpperCase()){
+   		return true;
+   	}else{
+   		return false;
+   	}
+   	
+   };
+  
+	</script>
+</html>

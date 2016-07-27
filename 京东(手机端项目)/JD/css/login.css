@@ -1,0 +1,65 @@
+body{background: #f8f8f8;}
+.header{position: relative;width: 100%;height: 44px;z-index: 1;margin: 0 auto;overflow: hidden;
+background:url(../images/login/header-bg.png) repeat-x;background-size:100% 44px;border-bottom: 1px solid #dadada;}
+
+.header a{position: absolute;width: 40px;height: 44px;}
+.header span{background: url(../images/login/arrow.png) no-repeat;z-index: 2;display: inline-block;background-size: 20px 20px;
+width: 20px;height: 20px;margin:12px 0 0 9px;overflow: hidden;}
+.header h2{text-align: center;line-height: 44px;color: #6d6d6d;font-weight: 400;font-size: 16px;}
+/*登录主要信息内容*/
+
+.wrap-content{width: 100%;height: 100%;margin: 0 auto;overflow: hidden;min-width: 320px;max-width: 640px;background: #f8f8f8;}
+/*错误提示语*/
+.mark-word{
+	text-align:left !important;
+	font-size: 13px;
+	color: #F25454;
+}
+
+.main{height: 100%;margin:20px 15px 0;}
+
+.item-step{width: 100%;text-align: center;margin-bottom: 10px;}
+.user{width: 100%;height: 42px;line-height: 42px;border: 1px solid #d7d7d7;
+border-radius: 2px;padding: 0;color: #252525;font-size: 16px;font-family: '\5fae\8f6f\96c5\9ed1';text-indent: 15px;}
+/*.txt-common{}*/
+.second-step{position: relative;}
+.third-step{position: relative;}
+.second-step span{position: absolute;right: 9px;width: 52px;height: 32px;top:6px;}
+.second-step span img{width: 100%;height: 100%;}
+.third-step span{position: absolute;text-align: center;width: 79px;height: 25px;top: 9px;
+border-left: 1px solid #d7d7d7;right: 0;padding-left: 7px;line-height: 25px;font-size: 16px;}
+.third-step span img{border: 0;width: 63px;height: 25px;margin: 0;padding: 0;}
+
+/*一个月免登录*/
+.month-login{position: relative;height: 18px;line-height: 18px;}
+.free-login{position: absolute;left: 0;top: 0;width: 18px;height: 18px;text-align: left;display: inline-block;}
+/*.free-login img{width: 18px;height: 18px;}*/
+.default-login{background: url(../images/login/download.png) no-repeat;background-size: 18px 18px;}
+.change-login{background: url(../images/login/download-3.png) no-repeat;background-size: 18px 18px;}
+.login-btn{display: inline-block;position: absolute;left: 26px;font-size: 13px;color: #848689;}
+/*登录*/
+.submit-btn{width: 100%;height: 40px;line-height: 40px;}
+.submit-btn .change-submit{background-color: #f25454 !important;color: #fff !important;}
+
+.submit-btn [type="submit"]{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #e2e2e2;
+	color: #bdbdbd;
+	border-radius: 1px;
+	font-size: 16px;
+}
+.rapid-regist{position: relative;margin-top: 20px;height: 16px;}
+.rapid-regist a{text-decoration: underline;color: #686868;font-size: 14px;}
+.rapid-regist .regist{position: absolute;left: 0;}
+.rapid-regist .back-password{position: absolute;right: 0;}
+.submit-method{position: relative;margin-top: 24px;text-align: left;}
+.submit-method span{display: block;height: 16px;margin-bottom: 13px;color: #666;font-size: 14px;}
+.submit-method a{width: 25px;height: 25px;display: block;overflow: hidden;margin-left: 5px;}
+.submit-method .qq-method span{background: url(../images/login/bottom.png) no-repeat;
+background-position: 2px -2px;
+display: block;width: 25px;height: 25px;
+background-size:200px 25px;
+
+}
